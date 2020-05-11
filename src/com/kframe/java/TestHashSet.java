@@ -1,5 +1,8 @@
 package com.kframe.java;
 
-public class TestHashSet {
+import java.util.HashSet;
 
+public class TestHashSet {
+	public static void main(String[] args) {
+	}
 }
