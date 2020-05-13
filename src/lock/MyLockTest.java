@@ -14,7 +14,7 @@ public class MyLockTest implements Runnable {
 			}
 			lock.lock();
 			try {
-				Thread.sleep(50000);
+				Thread.sleep(500);
 				System.out.println(Thread.currentThread().getName() + " get lock");
 			} catch (Exception e) {
 				e.printStackTrace();

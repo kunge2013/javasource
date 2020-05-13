@@ -44,6 +44,9 @@ public class MyLock {
 		}
 	}
 
+	/**
+	 * 递归抢占资源
+	 */
 	private void addNodeAndWait() {
 		// 如果当前只有一个等待线程时，重新获取一下锁，防止永远不被唤醒。
 		if (threadList.insert(Thread.currentThread()) && compareAndSetState(0, 1)) {
