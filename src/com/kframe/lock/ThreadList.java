@@ -1,4 +1,4 @@
-package lock;
+package com.kframe.lock;
 
 import java.lang.reflect.Constructor;
 

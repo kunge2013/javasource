@@ -1,4 +1,4 @@
-package lock;
+package com.kframe.lock;
 
 public class MyLockTest implements Runnable {
 
