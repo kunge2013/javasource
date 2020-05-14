@@ -22,9 +22,10 @@ public class ReentrantLockDemo implements Runnable {
 
 	public static void main(String[] args) {
 		ReentrantLockDemo rtld = new ReentrantLockDemo();
+		lock.lock();
 		Thread thread1 = new Thread(rtld);
 		Thread thread2 = new Thread(rtld);
 		thread1.start();
-		thread2.start();
+//		thread2.start();
 	}
 }
