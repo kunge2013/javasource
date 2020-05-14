@@ -1,8 +1,13 @@
 package com.kframe;
 
+import java.io.Serializable;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ReentrantLockDemo implements Runnable {
+public class ReentrantLockDemo implements Runnable ,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6632860908027331048L;
 	private static ReentrantLock lock = new ReentrantLock(true);
 
 	@Override

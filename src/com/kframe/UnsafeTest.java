@@ -1,11 +1,11 @@
 package com.kframe;
+
 import java.lang.reflect.Constructor;
 
-import com.kframe.lock.MyLock;
-
 import sun.misc.Unsafe;
+
 public class UnsafeTest {
-	
+
 	private static Unsafe unsafe;
 	static {
 		try {
@@ -16,9 +16,13 @@ public class UnsafeTest {
 		}
 
 	}
-	
+
 	public static void main(String[] args) {
 		System.out.println(unsafe.addressSize());
-		//		unsafe.putObjectVolatile(8);
+		Object o = null;
+		unsafe.putObjectVolatile((o = new ReentrantLockDemo()), 1000l, new ReentrantLockDemo());
+		ReentrantLockDemo ot = (ReentrantLockDemo) unsafe.getObject(o, 1000l);
+		System.out.println(ot.hashCode());
+		System.out.println(ot);
 	}
 }
